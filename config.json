@@ -1,0 +1,349 @@
+{
+  "log": {
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "dns_proxy",
+        "address": "https://8.8.8.8/dns-query",
+        "detour": "🎛️"
+      },
+      {
+        "tag": "dns_direct",
+        "address": "https://223.5.5.5/dns-query",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns_block",
+        "address": "rcode://refused"
+      }
+    ],
+    "rules": [
+      {
+        "protocol": [
+          "quic"
+        ],
+        "server": "dns_block",
+        "disable_cache": true
+      },
+      {
+        "source_ip_cidr": [
+          "2604:9cc0::/32",
+          "62.204.54.0/24",
+          "45.150.227.0/24"
+        ],
+        "server": "dns_block",
+        "disable_cache": true
+      },
+      {
+        "outbound": [
+          "any"
+        ],
+        "server": "dns_direct",
+        "rewrite_ttl": 64
+      },
+      {
+        "rule_set": [
+          "geosite-category-companies@cn",
+          "geo-cn"
+        ],
+        "server": "dns_direct",
+        "rewrite_ttl": 64
+      },
+      {
+        "outbound": [
+          "any"
+        ],
+        "invert": true,
+        "server": "dns_proxy",
+        "rewrite_ttl": 64
+      }
+    ],
+    "final": "dns_proxy",
+    "independent_cache": true
+  },
+  "route": {
+    "rule_set": [
+      {
+        "tag": "geo-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/mixed/cn.srs",
+        "download_detour": "🎛️"
+      },
+      {
+        "tag": "geosite-category-companies@cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-companies@cn.srs",
+        "download_detour": "🎛️"
+      }
+    ],
+    "rules": [
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "protocol": [
+          "quic"
+        ],
+        "outbound": "block"
+      },
+      {
+        "source_ip_cidr": [
+          "2604:9cc0::/32",
+          "62.204.54.0/24",
+          "45.150.227.0/24"
+        ],
+        "outbound": "block"
+      },
+      {
+        "clash_mode": "Direct",
+        "outbound": "direct"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "Global",
+        "outbound": "🎛️"
+      },
+      {
+        "rule_set": [
+          "geosite-category-companies@cn",
+          "geo-cn"
+        ],
+        "outbound": "direct"
+      }
+    ],
+    "final": "🎛️",
+    "auto_detect_interface": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090",
+      "external_ui": "Dashboard",
+      "external_ui_download_url": "https://github.com/MetaCubeX/metacubexd/archive/gh-pages.zip",
+      "external_ui_download_detour": "🎛️",
+      "default_mode": "Rule"
+    }
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "inet4_address": "172.19.0.1/30",
+      "inet6_address": "fdfe:dcba:9876::1/126",
+      "gso": true,
+      "auto_route": true,
+      "endpoint_independent_nat": true,
+      "stack": "mixed",
+      "sniff": true,
+      "platform": {
+        "http_proxy": {
+          "enabled": true
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "🎛️",
+      "outbounds": [
+        "📡",
+        "🛰IPV6️⃣",
+        "🛰",
+        "🛰2️⃣IPV6️⃣",
+        "🛰2️⃣",
+        "🛟",
+        "🛟2️⃣"
+      ],
+      "default": "📡"
+    },
+    {
+      "type": "urltest",
+      "tag": "📡",
+      "outbounds": [
+        "🛰IPV6️⃣",
+        "🛰",
+        "🛰2️⃣IPV6️⃣",
+        "🛰2️⃣"
+      ]
+    },
+    {
+      "type": "vless",
+      "tag": "🛰IPV6️⃣",
+      "server": "2604:9cc0:0000:bc94:0000:0000:0000:0001",
+      "server_port": 443,
+      "uuid": "2198ae2b-ae79-4aa2-a1d0-9213a1bc6c92",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "F7x1012GonLQQZlV4uEGXFpXMGN5P68t39R4w9r1NVQ",
+          "short_id": "e43ab9106d75c82f"
+        }
+      },
+      "packet_encoding": "packetaddr",
+      "reuse_addr": true,
+      "tcp_multi_path": true,
+      "udp_fragment": true,
+      "multiplex": {
+        "enabled": true,
+        "padding": true,
+        "max_streams": 4
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🛰",
+      "server": "62.204.54.173",
+      "server_port": 443,
+      "uuid": "2198ae2b-ae79-4aa2-a1d0-9213a1bc6c92",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "F7x1012GonLQQZlV4uEGXFpXMGN5P68t39R4w9r1NVQ",
+          "short_id": "e43ab9106d75c82f"
+        }
+      },
+      "packet_encoding": "packetaddr",
+      "reuse_addr": true,
+      "tcp_multi_path": true,
+      "udp_fragment": true,
+      "multiplex": {
+        "enabled": true,
+        "padding": true,
+        "max_streams": 4
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🛰2️⃣IPV6️⃣",
+      "server": "2604:9cc0:0000:ea60:0000:0000:0000:0001",
+      "server_port": 443,
+      "uuid": "1bfed503-acc8-4e05-860a-20f55afa0f97",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "eHD6aIyWwNwx0SDHOyXTX5IdrunodzIPy5ealMj2OB0",
+          "short_id": "325e4d90a1b8c76f"
+        }
+      },
+      "packet_encoding": "packetaddr",
+      "reuse_addr": true,
+      "tcp_multi_path": true,
+      "udp_fragment": true,
+      "multiplex": {
+        "enabled": true,
+        "padding": true,
+        "max_streams": 4
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🛰2️⃣",
+      "server": "45.150.227.244",
+      "server_port": 443,
+      "uuid": "1bfed503-acc8-4e05-860a-20f55afa0f97",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "eHD6aIyWwNwx0SDHOyXTX5IdrunodzIPy5ealMj2OB0",
+          "short_id": "325e4d90a1b8c76f"
+        }
+      },
+      "packet_encoding": "packetaddr",
+      "reuse_addr": true,
+      "tcp_multi_path": true,
+      "udp_fragment": true,
+      "multiplex": {
+        "enabled": true,
+        "padding": true,
+        "max_streams": 4
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🛟",
+      "server": "cf-java-vless.pages.dev",
+      "server_port": 443,
+      "uuid": "06d360b3-d35c-4317-b330-f067e0ffe030",
+      "tls": {
+        "enabled": true,
+        "server_name": "cf-java-vless.pages.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2048",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "reuse_addr": true
+    },
+    {
+      "type": "vless",
+      "tag": "🛟2️⃣",
+      "server": "cf-java-vless-second.pages.dev",
+      "server_port": 443,
+      "uuid": "18a7a608-2f60-48c7-a86b-dd9c9762fb03",
+      "tls": {
+        "enabled": true,
+        "server_name": "cf-java-vless-second.pages.dev",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2048",
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "reuse_addr": true
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "type": "direct",
+      "tag": "direct",
+      "reuse_addr": true
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}
