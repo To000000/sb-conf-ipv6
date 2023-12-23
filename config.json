@@ -210,7 +210,7 @@
       "multiplex": {
         "enabled": true,
         "padding": true,
-        "max_streams": 4
+        "max_streams": 1
       }
     },
     {
@@ -238,7 +238,7 @@
       "multiplex": {
         "enabled": true,
         "padding": true,
-        "max_streams": 4
+        "max_streams": 1
       }
     },
     {
