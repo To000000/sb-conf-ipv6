@@ -44,7 +44,9 @@
       },
       {
         "rule_set": [
-          "geo-google"
+          "geo-google",
+          "geosite-openai",
+          "geosite-bing"
         ],
         "server": "dns_proxy",
         "rewrite_ttl": 64
@@ -91,6 +93,20 @@
         "format": "binary",
         "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/google.srs",
         "download_detour": "🎛️"
+      },
+      {
+        "tag": "geosite-openai",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/openai.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geosite-bing",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/bing.srs",
+        "download_detour": "direct"
       }
     ],
     "rules": [
@@ -126,7 +142,9 @@
       },
       {
         "rule_set": [
-          "geo-google"
+          "geo-google",
+          "geosite-openai",
+          "geosite-bing"
         ],
         "outbound": "🎛️"
       },
