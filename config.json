@@ -44,6 +44,13 @@
       },
       {
         "rule_set": [
+          "geo-google"
+        ],
+        "server": "dns_proxy",
+        "rewrite_ttl": 64
+      },
+      {
+        "rule_set": [
           "geosite-category-companies@cn",
           "geo-cn"
         ],
@@ -77,6 +84,13 @@
         "format": "binary",
         "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-companies@cn.srs",
         "download_detour": "🎛️"
+      },
+      {
+        "tag": "geo-google",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/google.srs",
+        "download_detour": "🎛️"
       }
     ],
     "rules": [
@@ -108,6 +122,12 @@
       },
       {
         "clash_mode": "Global",
+        "outbound": "🎛️"
+      },
+      {
+        "rule_set": [
+          "geo-google"
+        ],
         "outbound": "🎛️"
       },
       {
