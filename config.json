@@ -107,14 +107,14 @@
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/openai.srs",
-        "download_detour": "direct"
+        "download_detour": "🎛️"
       },
       {
         "tag": "geosite-bing",
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/bing.srs",
-        "download_detour": "direct"
+        "download_detour": "🎛️"
       }
     ],
     "rules": [
