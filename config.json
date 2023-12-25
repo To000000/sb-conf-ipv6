@@ -45,6 +45,7 @@
       {
         "rule_set": [
           "geo-google",
+          "geo-telegram",
           "geosite-openai",
           "geosite-bing"
         ],
@@ -92,6 +93,13 @@
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/google.srs",
+        "download_detour": "🎛️"
+      },
+      {
+        "tag": "geo-telegram",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/mixed/telegram.srs",
         "download_detour": "🎛️"
       },
       {
@@ -143,6 +151,7 @@
       {
         "rule_set": [
           "geo-google",
+          "geo-telegram",
           "geosite-openai",
           "geosite-bing"
         ],
