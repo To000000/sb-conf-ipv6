@@ -44,6 +44,13 @@
       },
       {
         "rule_set": [
+          "geosite-private"
+        ],
+        "server": "dns_direct",
+        "rewrite_ttl": 64
+      },
+      {
+        "rule_set": [
           "geo-google",
           "geo-telegram",
           "geosite-openai",
@@ -74,6 +81,13 @@
   },
   "route": {
     "rule_set": [
+      {
+        "tag": "geosite-private",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/private.srs",
+        "download_detour": "🎛️"
+      },
       {
         "tag": "geo-cn",
         "type": "remote",
@@ -145,6 +159,12 @@
         "outbound": "direct"
       },
       {
+        "rule_set": [
+          "geosite-private"
+        ],
+        "outbound": "direct"
+      },
+      {
         "clash_mode": "Global",
         "outbound": "🎛️"
       },
@@ -171,6 +191,13 @@
   "experimental": {
     "cache_file": {
       "enabled": true
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090",
+      "external_ui": "Dashboard",
+      "external_ui_download_url": "https://github.com/MetaCubeX/metacubexd/archive/gh-pages.zip",
+      "external_ui_download_detour": "🎛️",
+      "default_mode": "Rule"
     }
   },
   "inbounds": [
