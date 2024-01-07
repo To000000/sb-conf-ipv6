@@ -20,17 +20,34 @@
     ],
     "rules": [
       {
-        "protocol": [
-          "quic"
-        ],
-        "server": "dns_block",
-        "disable_cache": true
-      },
-      {
-        "source_ip_cidr": [
-          "2604:9cc0::/32",
-          "62.204.54.0/24",
-          "45.150.227.0/24"
+        "type": "logical",
+        "mode": "or",
+        "rules": [
+          {
+            "port": 853
+          },
+          {
+            "network": "udp",
+            "port": 443
+          },
+          {
+            "protocol":  [
+              "stun",
+              "quic"
+            ]
+          },
+          {
+            "rule_set":  [
+              "geosite-category-ads-all"
+            ]
+          },
+          {
+            "source_ip_cidr": [
+              "2604:9cc0::/32",
+              "62.204.54.0/24",
+              "45.150.227.0/24"
+            ]
+          }
         ],
         "server": "dns_block",
         "disable_cache": true
@@ -103,6 +120,13 @@
         "download_detour": "🎛️"
       },
       {
+        "tag": "geosite-category-ads-all",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ads-all.srs",
+        "download_detour": "🎛️"
+      },
+      {
         "tag": "geo-google",
         "type": "remote",
         "format": "binary",
@@ -133,22 +157,49 @@
     ],
     "rules": [
       {
-        "protocol": "dns",
-        "outbound": "dns-out"
-      },
-      {
-        "protocol": [
-          "quic"
+        "type": "logical",
+        "mode": "or",
+        "rules": [
+          {
+            "port": 853
+          },
+          {
+            "network": "udp",
+            "port": 443
+          },
+          {
+            "protocol":  [
+              "stun",
+              "quic"
+            ]
+          },
+          {
+            "rule_set":  [
+              "geosite-category-ads-all"
+            ]
+          },
+          {
+            "source_ip_cidr": [
+              "2604:9cc0::/32",
+              "62.204.54.0/24",
+              "45.150.227.0/24"
+            ]
+          }
         ],
         "outbound": "block"
       },
       {
-        "source_ip_cidr": [
-          "2604:9cc0::/32",
-          "62.204.54.0/24",
-          "45.150.227.0/24"
+        "type": "logical",
+        "mode": "or",
+        "rules": [
+          {
+            "protocol": "dns"
+          },
+          {
+            "port": 53
+          }
         ],
-        "outbound": "block"
+        "outbound": "dns"
       },
       {
         "clash_mode": "Direct",
@@ -334,7 +385,7 @@
     },
     {
       "type": "dns",
-      "tag": "dns-out"
+      "tag": "dns"
     },
     {
       "type": "direct",
