@@ -307,7 +307,7 @@
       "udp_fragment": true,
       "multiplex": {
         "enabled": true,
-        "max_streams": 1,
+        "max_streams": 2,
         "padding": true
       }
     },
@@ -335,7 +335,7 @@
       "udp_fragment": true,
       "multiplex": {
         "enabled": true,
-        "max_streams": 1,
+        "max_streams": 2,
         "padding": true
       }
     },
