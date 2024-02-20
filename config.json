@@ -35,16 +35,6 @@
       },
       {
         "rule_set": [
-          "google",
-          "telegram",
-          "openai",
-          "copilot"
-        ],
-        "server": "dns_proxy",
-        "rewrite_ttl": 64
-      },
-      {
-        "rule_set": [
           "site-cn"
         ],
         "server": "dns_direct",
@@ -76,34 +66,6 @@
         "format": "binary",
         "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/bm7/Hijacking.srs",
         "download_detour": "🎛️"
-      },
-      {
-        "tag": "google",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/mixed/google.srs",
-        "download_detour": "🎛️"
-      },
-      {
-        "tag": "telegram",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/mixed/telegram.srs",
-        "download_detour": "🎛️"
-      },
-      {
-        "tag": "openai",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/bm7/OpenAI.srs",
-        "download_detour": "🎛️"
-      },
-      {
-        "tag": "copilot",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/bm7/Copilot.srs",
-        "download_detour": "🎛️"
       }
     ],
     "rules": [
@@ -127,15 +89,6 @@
       },
       {
         "clash_mode": "Global",
-        "outbound": "🎛️"
-      },
-      {
-        "rule_set": [
-          "google",
-          "telegram",
-          "openai",
-          "copilot"
-        ],
         "outbound": "🎛️"
       },
       {
