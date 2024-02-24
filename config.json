@@ -29,9 +29,7 @@
       {
         "rule_set": [
           "google",
-          "openai",
-          "telegram",
-          "twitter"
+          "openai"
         ],
         "server": "dns_proxy",
         "rewrite_ttl": 64
@@ -67,7 +65,7 @@
         "type": "remote",
         "tag": "google",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/mixed/google.srs",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/google.srs",
         "download_detour": "🎛️"
       },
       {
@@ -75,20 +73,6 @@
         "tag": "openai",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/openai.srs",
-        "download_detour": "🎛️"
-      },
-      {
-        "type": "remote",
-        "tag": "telegram",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/mixed/telegram.srs",
-        "download_detour": "🎛️"
-      },
-      {
-        "type": "remote",
-        "tag": "twitter",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/mixed/twitter.srs",
         "download_detour": "🎛️"
       }
     ],
@@ -112,9 +96,7 @@
       {
         "rule_set": [
           "google",
-          "openai",
-          "telegram",
-          "twitter"
+          "openai"
         ],
         "outbound": "🎛️"
       },
