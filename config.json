@@ -28,14 +28,14 @@
       },
       {
         "rule_set": [
-          "google",
-          "openai"
+          "google"
         ],
         "server": "dns_proxy",
         "rewrite_ttl": 64
       },
       {
         "rule_set": [
+          "steam-cn",
           "site-cn"
         ],
         "server": "dns_direct",
@@ -70,9 +70,9 @@
       },
       {
         "type": "remote",
-        "tag": "openai",
+        "tag": "steam-cn",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/openai.srs",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/steam@cn.srs",
         "download_detour": "🎛️"
       }
     ],
@@ -95,13 +95,13 @@
       },
       {
         "rule_set": [
-          "google",
-          "openai"
+          "google"
         ],
         "outbound": "🎛️"
       },
       {
         "rule_set": [
+          "steam-cn",
           "site-cn",
           "ip-cn"
         ],
