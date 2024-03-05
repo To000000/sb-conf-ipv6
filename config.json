@@ -141,9 +141,7 @@
       "outbounds": [
         "📡",
         "🛰IPV6️⃣",
-        "🛰2️⃣IPV6️⃣",
-        "🌩️IPV6️⃣",
-        "🌩️2️⃣IPV6️⃣"
+        "🛰2️⃣IPV6️⃣"
       ],
       "default": "📡"
     },
@@ -152,9 +150,7 @@
       "tag": "📡",
       "outbounds": [
         "🛰IPV6️⃣",
-        "🛰2️⃣IPV6️⃣",
-        "🌩️IPV6️⃣",
-        "🌩️2️⃣IPV6️⃣"
+        "🛰2️⃣IPV6️⃣"
       ]
     },
     {
@@ -214,34 +210,6 @@
         "max_streams": 1,
         "padding": true
       }
-    },
-    {
-      "type": "wireguard",
-      "tag": "🌩️IPV6️⃣",
-      "server": "2606:4700:100::a29f:c105",
-      "server_port": 2408,
-      "local_address": [
-        "172.16.0.2/32",
-        "2606:4700:110:8ce5:fb5e:eac6:81b:3578/128"
-      ],
-      "private_key": "1ayfRx79fSV5meNWoTzWLWylr0omuGhCKoO5VB6MmQI=",
-      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-      "reserved": [129, 124, 170],
-      "reuse_addr": true
-    },
-    {
-      "type": "wireguard",
-      "tag": "🌩️2️⃣IPV6️⃣",
-      "server": "2606:4700:100::a29f:c109",
-      "server_port": 2408,
-      "local_address": [
-        "172.16.0.2/32",
-        "2606:4700:110:8a5a:829d:8b54:63f7:c24d/128"
-      ],
-      "private_key": "BKPOlHiZR5qU4mk5jnIvmnmu7HoOnT5Kju4agPXeerA=",
-      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-      "reserved": [87, 98, 199],
-      "reuse_addr": true
     },
     {
       "type": "dns",
