@@ -88,7 +88,7 @@
         "type": "remote",
         "tag": "steam-cn",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/steam@cn.srs",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/bm7/SteamCN.srs",
         "download_detour": "🎛️"
       }
     ],
