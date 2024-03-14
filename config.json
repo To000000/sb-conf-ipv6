@@ -98,8 +98,16 @@
         "outbound": "dns"
       },
       {
+        "clash_mode": "Direct",
+        "outbound": "direct"
+      },
+      {
         "ip_is_private": true,
         "outbound": "direct"
+      },
+      {
+        "clash_mode": "Global",
+        "outbound": "🎛️"
       },
       {
         "rule_set": [
@@ -136,12 +144,7 @@
       "auto_route": true,
       "endpoint_independent_nat": true,
       "stack": "mixed",
-      "sniff": true,
-      "platform": {
-        "http_proxy": {
-          "enabled": true
-        }
-      }
+      "sniff": true
     }
   ],
   "outbounds": [
