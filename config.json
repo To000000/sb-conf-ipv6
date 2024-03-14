@@ -98,16 +98,8 @@
         "outbound": "dns"
       },
       {
-        "clash_mode": "Direct",
-        "outbound": "direct"
-      },
-      {
         "ip_is_private": true,
         "outbound": "direct"
-      },
-      {
-        "clash_mode": "Global",
-        "outbound": "🎛️"
       },
       {
         "rule_set": [
