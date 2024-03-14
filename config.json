@@ -30,8 +30,7 @@
         "rule_set": [
           "google",
           "openai",
-          "copilot",
-          "tiktok"
+          "copilot"
         ],
         "server": "dns_proxy",
         "rewrite_ttl": 64
@@ -68,14 +67,14 @@
         "type": "remote",
         "tag": "google",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/mixed/google.srs",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/google.srs",
         "download_detour": "🎛️"
       },
       {
         "type": "remote",
         "tag": "openai",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/bm7/OpenAI.srs",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/openai.srs",
         "download_detour": "🎛️"
       },
       {
@@ -83,13 +82,6 @@
         "tag": "copilot",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/bm7/Copilot.srs",
-        "download_detour": "🎛️"
-      },
-      {
-        "type": "remote",
-        "tag": "tiktok",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/tiktok.srs",
         "download_detour": "🎛️"
       },
       {
@@ -121,8 +113,7 @@
         "rule_set": [
           "google",
           "openai",
-          "copilot",
-          "tiktok"
+          "copilot"
         ],
         "outbound": "🎛️"
       },
