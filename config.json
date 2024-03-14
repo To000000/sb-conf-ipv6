@@ -30,7 +30,8 @@
         "rule_set": [
           "google",
           "openai",
-          "copilot"
+          "copilot",
+          "tiktok"
         ],
         "server": "dns_proxy",
         "rewrite_ttl": 64
@@ -86,9 +87,16 @@
       },
       {
         "type": "remote",
+        "tag": "tiktok",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/tiktok.srs",
+        "download_detour": "🎛️"
+      },
+      {
+        "type": "remote",
         "tag": "steam-cn",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/bm7/SteamCN.srs",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/steam@cn.srs",
         "download_detour": "🎛️"
       }
     ],
@@ -113,7 +121,8 @@
         "rule_set": [
           "google",
           "openai",
-          "copilot"
+          "copilot",
+          "tiktok"
         ],
         "outbound": "🎛️"
       },
