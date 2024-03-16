@@ -30,7 +30,8 @@
         "rule_set": [
           "google",
           "openai",
-          "copilot"
+          "copilot",
+          "bing"
         ],
         "server": "dns_proxy",
         "rewrite_ttl": 64
@@ -86,6 +87,13 @@
       },
       {
         "type": "remote",
+        "tag": "bing",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/bing.srs",
+        "download_detour": "🎛️"
+      },
+      {
+        "type": "remote",
         "tag": "steam-cn",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/steam@cn.srs",
@@ -105,7 +113,8 @@
         "rule_set": [
           "google",
           "openai",
-          "copilot"
+          "copilot",
+          "bing"
         ],
         "outbound": "🎛️"
       },
