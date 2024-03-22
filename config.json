@@ -30,7 +30,6 @@
         "rule_set": [
           "google",
           "openai",
-          "copilot",
           "bing"
         ],
         "server": "dns_proxy",
@@ -80,13 +79,6 @@
       },
       {
         "type": "remote",
-        "tag": "copilot",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/bm7/Copilot.srs",
-        "download_detour": "🎛️"
-      },
-      {
-        "type": "remote",
         "tag": "bing",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/bing.srs",
@@ -113,7 +105,6 @@
         "rule_set": [
           "google",
           "openai",
-          "copilot",
           "bing"
         ],
         "outbound": "🎛️"
