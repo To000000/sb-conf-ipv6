@@ -145,8 +145,7 @@
       "tag": "🎛️",
       "outbounds": [
         "📡",
-        "🛰IPV6️⃣",
-        "🛰2️⃣IPV6️⃣"
+        "🛰IPV6️⃣"
       ],
       "default": "📡"
     },
@@ -154,8 +153,7 @@
       "type": "urltest",
       "tag": "📡",
       "outbounds": [
-        "🛰IPV6️⃣",
-        "🛰2️⃣IPV6️⃣"
+        "🛰IPV6️⃣"
       ]
     },
     {
@@ -174,35 +172,6 @@
           "enabled": true,
           "public_key": "F7x1012GonLQQZlV4uEGXFpXMGN5P68t39R4w9r1NVQ",
           "short_id": "e43ab9106d75c82f"
-        }
-      },
-      "packet_encoding": "xudp",
-      "reuse_addr": true,
-      "tcp_fast_open": true,
-      "tcp_multi_path": true,
-      "udp_fragment": true,
-      "multiplex": {
-        "enabled": true,
-        "max_streams": 1,
-        "padding": true
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🛰2️⃣IPV6️⃣",
-      "server": "2604:9cc0:0000:ea60:0000:0000:0000:0001",
-      "server_port": 443,
-      "uuid": "1bfed503-acc8-4e05-860a-20f55afa0f97",
-      "tls": {
-        "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "eHD6aIyWwNwx0SDHOyXTX5IdrunodzIPy5ealMj2OB0",
-          "short_id": "325e4d90a1b8c76f"
         }
       },
       "packet_encoding": "xudp",
