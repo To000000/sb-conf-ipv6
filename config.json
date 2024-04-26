@@ -28,17 +28,20 @@
       },
       {
         "rule_set": [
-          "proxy",
-          "google",
-          "openai",
-          "bing"
+          "steam-cn"
+        ],
+        "server": "dns_direct",
+        "rewrite_ttl": 64
+      },
+      {
+        "rule_set": [
+          "proxy"
         ],
         "server": "dns_proxy",
         "rewrite_ttl": 64
       },
       {
         "rule_set": [
-          "steam-cn",
           "site-cn"
         ],
         "server": "dns_direct",
@@ -73,27 +76,6 @@
       },
       {
         "type": "remote",
-        "tag": "google",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/google.srs",
-        "download_detour": "🎛️"
-      },
-      {
-        "type": "remote",
-        "tag": "openai",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/openai.srs",
-        "download_detour": "🎛️"
-      },
-      {
-        "type": "remote",
-        "tag": "bing",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/bing.srs",
-        "download_detour": "🎛️"
-      },
-      {
-        "type": "remote",
         "tag": "steam-cn",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/steam@cn.srs",
@@ -111,16 +93,18 @@
       },
       {
         "rule_set": [
-          "proxy",
-          "google",
-          "openai",
-          "bing"
+          "steam-cn"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "rule_set": [
+          "proxy"
         ],
         "outbound": "🎛️"
       },
       {
         "rule_set": [
-          "steam-cn",
           "site-cn",
           "ip-cn"
         ],
