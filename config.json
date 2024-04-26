@@ -28,6 +28,7 @@
       },
       {
         "rule_set": [
+          "proxy",
           "google",
           "openai",
           "bing"
@@ -61,6 +62,13 @@
         "tag": "ip-cn",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/cn.srs",
+        "download_detour": "🎛️"
+      },
+      {
+        "type": "remote",
+        "tag": "proxy",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/proxy.srs",
         "download_detour": "🎛️"
       },
       {
@@ -103,6 +111,7 @@
       },
       {
         "rule_set": [
+          "proxy",
           "google",
           "openai",
           "bing"
