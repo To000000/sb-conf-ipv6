@@ -46,6 +46,22 @@
         ],
         "server": "dns_direct",
         "rewrite_ttl": 64
+      },
+      {
+        "type": "logical",
+        "mode": "and",
+        "rules": [
+          {
+            "rule_set": "proxy",
+            "invert": true
+          },
+          {
+            "rule_set": "ip-cn"
+          }
+        ],
+        "server": "dns_proxy",
+        "client_subnet": "114.114.114.114/24",
+        "rewrite_ttl": 64
       }
     ],
     "final": "dns_proxy",
