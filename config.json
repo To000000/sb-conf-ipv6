@@ -124,7 +124,8 @@
   },
   "experimental": {
     "cache_file": {
-      "enabled": true
+      "enabled": true,
+      "store_rdrc": true
     },
     "clash_api": {
       "default_mode": "Enhanced"
