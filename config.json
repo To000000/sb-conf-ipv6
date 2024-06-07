@@ -15,7 +15,7 @@
       },
       {
         "tag": "dns_block",
-        "address": "rcode://refused"
+        "address": "rcode://success"
       }
     ],
     "rules": [
@@ -65,21 +65,21 @@
         "type": "remote",
         "tag": "site-cn",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/cn.srs",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/geolocation-cn.srs",
         "download_detour": "🎛️"
       },
       {
         "type": "remote",
         "tag": "ip-cn",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/cn.srs",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/cn.srs",
         "download_detour": "🎛️"
       },
       {
         "type": "remote",
         "tag": "proxy",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geosite/proxy.srs",
+        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/geolocation-!cn.srs",
         "download_detour": "🎛️"
       },
       {
