@@ -91,23 +91,6 @@
         "mode": "or",
         "rules": [
           {
-            "port": 853
-          },
-          {
-            "network": "udp",
-            "port": 443
-          },
-          {
-            "protocol": "stun"
-          }
-        ],
-        "outbound": "block"
-      },
-      {
-        "type": "logical",
-        "mode": "or",
-        "rules": [
-          {
             "protocol": "dns"
           },
           {
