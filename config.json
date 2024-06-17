@@ -134,13 +134,6 @@
     {
       "type": "mixed",
       "tag": "mixed-in",
-      "listen": "127.0.0.1",
-      "listen_port": 8080,
-      "sniff": true
-    },
-    {
-      "type": "mixed",
-      "tag": "mixed-in",
       "listen": "0.0.0.0",
       "listen_port": 8080,
       "sniff": true
