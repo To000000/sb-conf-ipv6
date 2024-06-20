@@ -154,7 +154,8 @@
         "📡",
         "🛰IPV6️⃣"
       ],
-      "default": "📡"
+      "default": "📡",
+      "interrupt_exist_connections": true
     },
     {
       "type": "urltest",
