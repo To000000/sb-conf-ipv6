@@ -28,6 +28,13 @@
       },
       {
         "rule_set": [
+          "site-!cn"
+        ],
+        "server": "dns_proxy",
+        "rewrite_ttl": 64
+      },
+      {
+        "rule_set": [
           "steam-cn",
           "site-cn"
         ],
@@ -35,16 +42,8 @@
         "rewrite_ttl": 64
       },
       {
-        "type": "logical",
-        "mode": "and",
-        "rules": [
-          {
-            "rule_set": "site-!cn",
-            "invert": true
-          },
-          {
-            "rule_set": "ip-cn"
-          }
+        "rule_set": [
+          "ip-cn"
         ],
         "server": "dns_proxy",
         "client_subnet": "114.114.114.114/24",
@@ -93,6 +92,12 @@
       {
         "ip_is_private": true,
         "outbound": "direct"
+      },
+      {
+        "rule_set": [
+          "site-!cn"
+        ],
+        "outbound": "🎛️"
       },
       {
         "rule_set": [
