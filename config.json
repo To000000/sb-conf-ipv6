@@ -53,6 +53,7 @@
       }
     ],
     "final": "dns_proxy",
+    "strategy": "prefer_ipv6",
     "independent_cache": true
   },
   "route": {
