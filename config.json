@@ -11,7 +11,7 @@
       },
       {
         "tag": "dns_direct",
-        "address": "tls://119.29.29.29",
+        "address": "tls://1.12.12.12",
         "detour": "direct"
       },
       {
