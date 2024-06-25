@@ -47,7 +47,7 @@
           "ip-cn"
         ],
         "server": "dns_proxy",
-        "client_subnet": "114.114.114.114/24",
+        "client_subnet": "2402:4e00::",
         "rewrite_ttl": 64
       }
     ],
