@@ -120,6 +120,11 @@
       "store_rdrc": true
     }
   },
+  "ntp": {
+    "enabled": true,
+    "server": "ntp.ntsc.ac.cn",
+    "detour": "direct"
+  },
   "inbounds": [
     {
       "type": "tun",
