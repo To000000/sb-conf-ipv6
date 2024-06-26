@@ -122,7 +122,7 @@
   },
   "ntp": {
     "enabled": true,
-    "server": "ntp.ntsc.ac.cn",
+    "server": "time.cloud.tencent.com",
     "detour": "direct"
   },
   "inbounds": [
