@@ -167,10 +167,14 @@
       "type": "direct",
       "tag": "direct-in",
       "listen": "::",
-      "listen_port": [
-        53,
-        853
-      ],
+      "listen_port": 853,
+      "sniff": true
+    },
+    {
+      "type": "direct",
+      "tag": "direct-in",
+      "listen": "::",
+      "listen_port": 53,
       "sniff": true
     }
   ],
