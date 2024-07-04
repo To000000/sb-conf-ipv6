@@ -143,7 +143,7 @@
       "platform": {
         "http_proxy": {
           "enabled": true,
-          "server": "127.0.0.1",
+          "server": "::1",
           "server_port": 8080
         }
       },
@@ -152,7 +152,7 @@
     {
       "type": "mixed",
       "tag": "mixed-in",
-      "listen": "127.0.0.1",
+      "listen": "::1",
       "listen_port": 8080,
       "sniff": true
     },
