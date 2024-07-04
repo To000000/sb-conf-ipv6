@@ -152,14 +152,14 @@
     {
       "type": "mixed",
       "tag": "mixed-in",
-      "listen": "::1",
+      "listen": "::",
       "listen_port": 8080,
       "sniff": true
     },
     {
       "type": "mixed",
       "tag": "mixed-in",
-      "listen": "::",
+      "listen": "::1",
       "listen_port": 8080,
       "sniff": true
     },
