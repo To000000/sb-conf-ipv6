@@ -162,6 +162,16 @@
       "listen": "::",
       "listen_port": 8080,
       "sniff": true
+    },
+    {
+      "type": "direct",
+      "tag": "direct-in",
+      "listen": "::",
+      "listen_port": [
+        53,
+        853
+      ],
+      "sniff": true
     }
   ],
   "outbounds": [
