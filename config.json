@@ -29,11 +29,6 @@
         "rewrite_ttl": 64
       },
       {
-        "ip_is_private": true,
-        "server": "dns_direct",
-        "rewrite_ttl": 64
-      },
-      {
         "rule_set": [
           "site-!cn"
         ],
