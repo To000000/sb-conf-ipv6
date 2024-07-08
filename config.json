@@ -152,20 +152,6 @@
       "sniff": true
     },
     {
-      "type": "mixed",
-      "tag": "mixed-in",
-      "listen": "::1",
-      "listen_port": 8080,
-      "sniff": true
-    },
-    {
-      "type": "direct",
-      "tag": "direct-in",
-      "listen": "::",
-      "listen_port": 853,
-      "sniff": true
-    },
-    {
       "type": "direct",
       "tag": "direct-in",
       "listen": "::",
