@@ -114,11 +114,6 @@
     "final": "🎛️",
     "auto_detect_interface": true
   },
-  "ntp": {
-    "enabled": true,
-    "server": "ntp.tencent.com",
-    "detour": "direct"
-  },
   "experimental": {
     "cache_file": {
       "enabled": true,
