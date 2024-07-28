@@ -11,9 +11,8 @@
       },
       {
         "tag": "dns_direct",
-        "address": "tls://1.12.12.12",
-        "detour": "direct",
-        "client_subnet": "2402:4e00::"
+        "address": "local",
+        "detour": "direct"
       },
       {
         "tag": "dns_block",
