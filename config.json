@@ -128,6 +128,7 @@
       "inet6_address": "fdfe:dcba:9876::1/126",
       "gso": true,
       "auto_route": true,
+      "strict_route": true,
       "endpoint_independent_nat": true,
       "stack": "mixed",
       "sniff": true
