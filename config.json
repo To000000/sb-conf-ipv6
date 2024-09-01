@@ -166,7 +166,6 @@
       "uuid": "2198ae2b-ae79-4aa2-a1d0-9213a1bc6c92",
       "tls": {
         "enabled": true,
-        "disable_sni": true,
         "utls": {
           "enabled": true,
           "fingerprint": "random"
