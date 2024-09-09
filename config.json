@@ -5,13 +5,13 @@
     "servers": [
       {
         "tag": "dns_proxy",
-        "address": "8.8.8.8",
+        "address": "2001:4860:4860::8888",
         "detour": "🎛️",
         "client_subnet": "2604:9cc0::"
       },
       {
         "tag": "dns_direct",
-        "address": "1.12.12.12",
+        "address": "2402:4e00::",
         "detour": "direct",
         "client_subnet": "2402:4e00::"
       },
