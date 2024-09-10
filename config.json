@@ -90,7 +90,7 @@
         "type": "remote",
         "tag": "steam-cn",
         "format": "binary",
-        "url": "https:/cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/steam@cn.srs",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/steam@cn.srs",
         "download_detour": "🎛️"
       }
     ],
