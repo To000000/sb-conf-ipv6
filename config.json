@@ -11,9 +11,8 @@
       },
       {
         "tag": "dns_direct",
-        "address": "tls://1.12.12.12",
-        "detour": "direct",
-        "client_subnet": "1.12.12.1"
+        "address": "local",
+        "detour": "direct"
       },
       {
         "tag": "dns_block",
@@ -55,7 +54,7 @@
           "ip-cn"
         ],
         "server": "dns_proxy",
-        "client_subnet": "1.12.12.1",
+        "client_subnet": "114.114.114.114",
         "rewrite_ttl": 64
       }
     ],
@@ -69,28 +68,28 @@
         "type": "remote",
         "tag": "site-cn",
         "format": "binary",
-        "url": "https://gcore.jsdelivr.net/gh/CHIZI-0618/v2ray-rules-dat@release/singbox_rule_set/geosite-geolocation-cn.srs",
+        "url": "https://cdn.jsdelivr.net/gh/CHIZI-0618/v2ray-rules-dat@release/singbox_rule_set/geosite-geolocation-cn.srs",
         "download_detour": "direct"
       },
       {
         "type": "remote",
         "tag": "ip-cn",
         "format": "binary",
-        "url": "https://gcore.jsdelivr.net/gh/CHIZI-0618/v2ray-rules-dat@release/singbox_ip_rule_set/geoip-cn.srs",
+        "url": "https://cdn.jsdelivr.net/gh/CHIZI-0618/v2ray-rules-dat@release/singbox_ip_rule_set/geoip-cn.srs",
         "download_detour": "direct"
       },
       {
         "type": "remote",
         "tag": "site-!cn",
         "format": "binary",
-        "url": "https://gcore.jsdelivr.net/gh/CHIZI-0618/v2ray-rules-dat@release/singbox_rule_set/geosite-geolocation-!cn.srs",
+        "url": "https://cdn.jsdelivr.net/gh/CHIZI-0618/v2ray-rules-dat@release/singbox_rule_set/geosite-geolocation-!cn.srs",
         "download_detour": "direct"
       },
       {
         "type": "remote",
         "tag": "steam-cn",
         "format": "binary",
-        "url": "https://gcore.jsdelivr.net/gh/CHIZI-0618/v2ray-rules-dat@release/singbox_rule_set/geosite-steam@cn.srs",
+        "url": "https://cdn.jsdelivr.net/gh/CHIZI-0618/v2ray-rules-dat@release/singbox_rule_set/geosite-steam@cn.srs",
         "download_detour": "direct"
       }
     ],
