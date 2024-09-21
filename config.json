@@ -68,28 +68,28 @@
         "type": "remote",
         "tag": "site-cn",
         "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/CHIZI-0618/v2ray-rules-dat@release/singbox_rule_set/geosite-geolocation-cn.srs",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@refs/heads/sing/geo/geosite/geolocation-cn.srs",
         "download_detour": "direct"
       },
       {
         "type": "remote",
         "tag": "ip-cn",
         "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/CHIZI-0618/v2ray-rules-dat@release/singbox_ip_rule_set/geoip-cn.srs",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@refs/heads/sing/geo/geoip/cn.srs",
         "download_detour": "direct"
       },
       {
         "type": "remote",
         "tag": "site-!cn",
         "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/CHIZI-0618/v2ray-rules-dat@release/singbox_rule_set/geosite-geolocation-!cn.srs",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@refs/heads/sing/geo/geosite/geolocation-!cn.srs",
         "download_detour": "direct"
       },
       {
         "type": "remote",
         "tag": "steam-cn",
         "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/CHIZI-0618/v2ray-rules-dat@release/singbox_rule_set/geosite-steam@cn.srs",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@refs/heads/sing/geo/geosite/steam@cn.srs",
         "download_detour": "direct"
       }
     ],
