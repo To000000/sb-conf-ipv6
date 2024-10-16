@@ -35,6 +35,14 @@
         "server": "dns_block"
       },
       {
+        "protocol": [
+          "bittorrent",
+          "ssh"
+        ],
+        "server": "dns_direct",
+        "rewrite_ttl": 64
+      },
+      {
         "rule_set": [
           "site-!cn"
         ],
@@ -109,6 +117,13 @@
         "outbound": "block"
       },
       {
+        "protocol": [
+          "bittorrent",
+          "ssh"
+        ],
+        "outbound": "direct"
+      },
+      {
         "rule_set": [
           "site-!cn"
         ],
@@ -136,20 +151,15 @@
     {
       "type": "tun",
       "tag": "tun-in",
-      "inet6_address": "fdfe:dcba:9876::1/126",
-      "inet4_address": "172.18.0.1/30",
+      "address": [
+        "fdfe:dcba:9876::1/126",
+        "172.18.0.1/30"
+      ],
       "gso": true,
       "auto_route": true,
       "strict_route": true,
       "endpoint_independent_nat": true,
       "stack": "mixed",
-      "sniff": true
-    },
-    {
-      "type": "mixed",
-      "tag": "mixed-in",
-      "listen": "::",
-      "listen_port": 8080,
       "sniff": true
     }
   ],
