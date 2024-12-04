@@ -51,6 +51,7 @@
       },
       {
         "rule_set": [
+          "ai-cn",
           "steam-cn",
           "site-cn"
         ],
@@ -95,6 +96,13 @@
       },
       {
         "type": "remote",
+        "tag": "ai-cn",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@refs/heads/sing/geo/geosite/category-ai-cn.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
         "tag": "steam-cn",
         "format": "binary",
         "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@refs/heads/sing/geo/geosite/steam@cn.srs",
@@ -131,6 +139,7 @@
       },
       {
         "rule_set": [
+          "ai-cn",
           "steam-cn",
           "site-cn",
           "ip-cn"
