@@ -35,6 +35,14 @@
         "server": "dns_block"
       },
       {
+        "rule_set": [
+          "nocoin",
+          "ad-dns"
+        ],
+        "disable_cache": true,
+        "server": "dns_block"
+      },
+      {
         "protocol": [
           "bittorrent",
           "ssh"
@@ -73,6 +81,20 @@
   },
   "route": {
     "rule_set": [
+      {
+        "type": "remote",
+        "tag": "nocoin",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/karingX/karing-ruleset@sing/AdGuard/ppfeuferFilter/NoCoin-Filter-List.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "ad-dns",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/karingX/karing-ruleset@sing/AdGuard/ppfeuferFilter/AdGuard-DNS-filter.srs",
+        "download_detour": "direct"
+      },
       {
         "type": "remote",
         "tag": "site-cn",
@@ -121,6 +143,13 @@
       {
         "protocol": [
           "quic"
+        ],
+        "outbound": "block"
+      },
+      {
+        "rule_set": [
+          "nocoin",
+          "ad-dns"
         ],
         "outbound": "block"
       },
