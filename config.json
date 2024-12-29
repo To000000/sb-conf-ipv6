@@ -36,8 +36,7 @@
       },
       {
         "rule_set": [
-          "nocoin",
-          "ad-dns"
+          "nocoin"
         ],
         "disable_cache": true,
         "server": "dns_block"
@@ -86,13 +85,6 @@
         "tag": "nocoin",
         "format": "binary",
         "url": "https://cdn.jsdelivr.net/gh/karingX/karing-ruleset@sing/AdGuard/ppfeuferFilter/NoCoin-Filter-List.srs",
-        "download_detour": "direct"
-      },
-      {
-        "type": "remote",
-        "tag": "ad-dns",
-        "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/karingX/karing-ruleset@sing/AdGuard/ppfeuferFilter/AdGuard-DNS-filter.srs",
         "download_detour": "direct"
       },
       {
@@ -148,8 +140,7 @@
       },
       {
         "rule_set": [
-          "nocoin",
-          "ad-dns"
+          "nocoin"
         ],
         "outbound": "block"
       },
