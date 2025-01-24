@@ -213,11 +213,7 @@
           "enabled": true,
           "fingerprint": "random"
         }
-      },
-      "reuse_addr": true,
-      "tcp_fast_open": true,
-      "tcp_multi_path": true,
-      "udp_fragment": true
+      }
     },
     {
       "type": "dns",
