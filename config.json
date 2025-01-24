@@ -221,8 +221,7 @@
     },
     {
       "type": "direct",
-      "tag": "direct",
-      "reuse_addr": true
+      "tag": "direct"
     },
     {
       "type": "block",
