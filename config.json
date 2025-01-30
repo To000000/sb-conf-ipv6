@@ -13,10 +13,6 @@
         "tag": "dns_direct",
         "address": "local",
         "detour": "direct"
-      },
-      {
-        "tag": "dns_block",
-        "address": "rcode://success"
       }
     ],
     "rules": [
@@ -24,6 +20,7 @@
         "outbound": [
           "any"
         ],
+        "action": "route",
         "server": "dns_direct",
         "rewrite_ttl": 64
       },
@@ -31,14 +28,15 @@
         "protocol": [
           "quic"
         ],
-        "disable_cache": true,
-        "server": "dns_block"
+        "action": "reject",
+        "method": "drop"
       },
       {
         "protocol": [
           "bittorrent",
           "ssh"
         ],
+        "action": "route",
         "server": "dns_direct",
         "rewrite_ttl": 64
       },
@@ -46,6 +44,7 @@
         "rule_set": [
           "site-!cn"
         ],
+        "action": "route",
         "server": "dns_proxy",
         "rewrite_ttl": 64
       },
@@ -55,6 +54,7 @@
           "steam-cn",
           "site-cn"
         ],
+        "action": "route",
         "server": "dns_direct",
         "rewrite_ttl": 64
       },
@@ -62,6 +62,7 @@
         "rule_set": [
           "ip-cn"
         ],
+        "action": "route",
         "server": "dns_proxy",
         "client_subnet": "119.29.29.29",
         "rewrite_ttl": 64
@@ -111,30 +112,37 @@
     ],
     "rules": [
       {
+        "action": "sniff"
+      },
+      {
         "protocol": "dns",
-        "outbound": "dns"
+        "action": "hijack-dns"
       },
       {
         "ip_is_private": true,
+        "action": "route",
         "outbound": "direct"
       },
       {
         "protocol": [
           "quic"
         ],
-        "outbound": "block"
+        "action": "reject",
+        "method": "drop"
       },
       {
         "protocol": [
           "bittorrent",
           "ssh"
         ],
+        "action": "route",
         "outbound": "direct"
       },
       {
         "rule_set": [
           "site-!cn"
         ],
+        "action": "route",
         "outbound": "🎛️"
       },
       {
@@ -144,6 +152,7 @@
           "site-cn",
           "ip-cn"
         ],
+        "action": "route",
         "outbound": "direct"
       }
     ],
@@ -167,8 +176,7 @@
       "auto_route": true,
       "strict_route": true,
       "endpoint_independent_nat": true,
-      "stack": "mixed",
-      "sniff": true
+      "stack": "mixed"
     }
   ],
   "outbounds": [
@@ -216,16 +224,8 @@
       }
     },
     {
-      "type": "dns",
-      "tag": "dns"
-    },
-    {
       "type": "direct",
       "tag": "direct"
-    },
-    {
-      "type": "block",
-      "tag": "block"
     }
   ]
 }
