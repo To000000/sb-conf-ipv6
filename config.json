@@ -5,8 +5,7 @@
     "servers": [
       {
         "tag": "dns_direct",
-        "address": "local",
-        "detour": "direct"
+        "address": "local"
       },
       {
         "tag": "dns_proxy",
