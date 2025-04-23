@@ -17,7 +17,9 @@
     "rules": [
       {
         "protocol": [
-          "quic"
+          "quic",
+          "adguard-mobile",
+          "nocoin"
         ],
         "action": "reject",
         "method": "drop"
@@ -65,6 +67,20 @@
   },
   "route": {
     "rule_set": [
+      {
+        "type": "remote",
+        "tag": "adguard-mobile",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/yesokay666/filter@main/srs/AdGuardMobile.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "nocoin",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/yesokay666/filter@main/srs/NoCoin.srs",
+        "download_detour": "direct"
+      },
       {
         "type": "remote",
         "tag": "site-cn",
