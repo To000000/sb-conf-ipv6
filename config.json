@@ -18,8 +18,8 @@
       {
         "protocol": [
           "quic",
-          "adguard-mobile",
-          "nocoin"
+          "nocoin",
+          "adguard-mobile"
         ],
         "action": "reject",
         "method": "drop"
