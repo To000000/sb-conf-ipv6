@@ -18,7 +18,16 @@
       {
         "protocol": [
           "quic",
-          "ad"
+          "Chinese",
+          "Mobile",
+          "AdGuardAds",
+          "uBlockBadwarerisks",
+          "uBlockPrivacy",
+          "uBlockUnbreak",
+          "EasyListAds",
+          "EasyPrivacy",
+          "MaliciousURL",
+          "Track"
         ],
         "action": "reject",
         "method": "drop"
@@ -68,9 +77,72 @@
     "rule_set": [
       {
         "type": "remote",
-        "tag": "ad",
+        "tag": "Chinese",
         "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/yesokay666/filter@main/srs/Energized.srs",
+        "url": "https://cdn.jsdelivr.net/gh/yesokay666/filter@main/srs/Chinese.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "Mobile",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/yesokay666/filter@main/srs/Mobile.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "AdGuardAds",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/yesokay666/filter@main/srs/AdGuardAds.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "uBlockBadwarerisks",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/yesokay666/filter@main/srs/uBlockBadwarerisks.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "uBlockPrivacy",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/yesokay666/filter@main/srs/uBlockPrivacy.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "uBlockUnbreak",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/yesokay666/filter@main/srs/uBlockUnbreak.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "EasyListAds",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/yesokay666/filter@main/srs/EasyListAds.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "EasyPrivacy",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/yesokay666/filter@main/srs/EasyPrivacy.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "MaliciousURL",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/yesokay666/filter@main/srs/MaliciousURL.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "Track",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/yesokay666/filter@main/srs/Track.srs",
         "download_detour": "direct"
       },
       {
