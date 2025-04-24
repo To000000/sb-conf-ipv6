@@ -17,16 +17,11 @@
     "rules": [
       {
         "protocol": [
-          "Chinese",
-          "Mobile",
-          "AdGuardAds",
-          "uBlockBadwarerisks",
-          "uBlockPrivacy",
-          "uBlockUnbreak",
-          "EasyListAds",
-          "EasyPrivacy",
+          "AdguardCryptominers",
           "MaliciousURL",
-          "Track",
+          "NoCoin",
+          "uBlockBadwarerisks",
+          "uBlockResourceabuse",
           "quic"
         ],
         "action": "reject",
@@ -77,58 +72,9 @@
     "rule_set": [
       {
         "type": "remote",
-        "tag": "Chinese",
+        "tag": "AdguardCryptominers",
         "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/yesokay666/filter@main/srs/Chinese.srs",
-        "download_detour": "direct"
-      },
-      {
-        "type": "remote",
-        "tag": "Mobile",
-        "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/yesokay666/filter@main/srs/Mobile.srs",
-        "download_detour": "direct"
-      },
-      {
-        "type": "remote",
-        "tag": "AdGuardAds",
-        "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/yesokay666/filter@main/srs/AdGuardAds.srs",
-        "download_detour": "direct"
-      },
-      {
-        "type": "remote",
-        "tag": "uBlockBadwarerisks",
-        "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/yesokay666/filter@main/srs/uBlockBadwarerisks.srs",
-        "download_detour": "direct"
-      },
-      {
-        "type": "remote",
-        "tag": "uBlockPrivacy",
-        "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/yesokay666/filter@main/srs/uBlockPrivacy.srs",
-        "download_detour": "direct"
-      },
-      {
-        "type": "remote",
-        "tag": "uBlockUnbreak",
-        "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/yesokay666/filter@main/srs/uBlockUnbreak.srs",
-        "download_detour": "direct"
-      },
-      {
-        "type": "remote",
-        "tag": "EasyListAds",
-        "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/yesokay666/filter@main/srs/EasyListAds.srs",
-        "download_detour": "direct"
-      },
-      {
-        "type": "remote",
-        "tag": "EasyPrivacy",
-        "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/yesokay666/filter@main/srs/EasyPrivacy.srs",
+        "url": "https://cdn.jsdelivr.net/gh/yesokay666/filter@main/srs/AdguardCryptominers.srs",
         "download_detour": "direct"
       },
       {
@@ -140,9 +86,23 @@
       },
       {
         "type": "remote",
-        "tag": "Track",
+        "tag": "NoCoin",
         "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/yesokay666/filter@main/srs/Track.srs",
+        "url": "https://cdn.jsdelivr.net/gh/yesokay666/filter@main/srs/NoCoin.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "uBlockBadwarerisks",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/yesokay666/filter@main/srs/uBlockBadwarerisks.srs",
+        "download_detour": "direct"
+      },
+      {
+        "type": "remote",
+        "tag": "uBlockResourceabuse",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/yesokay666/filter@main/srs/uBlockResourceabuse.srs",
         "download_detour": "direct"
       },
       {
@@ -281,7 +241,7 @@
     {
       "type": "shadowtls",
       "tag": "shadowtls",
-      "server": "2604:9cc0:0000:bc94:0000:0000:0000:0001",
+      "server": "2604:9cc0:0000:bc94::1",
       "server_port": 443,
       "version": 3,
       "password": "NU0jWMYui/UtzUwYKOYxM/ybXkNvJFqHzNkdJZe7LJg=",
