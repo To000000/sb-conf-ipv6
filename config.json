@@ -19,7 +19,7 @@
         "protocol": [
           "quic",
           "nocoin",
-          "adguard-mobile"
+          "adguarddns"
         ],
         "action": "reject",
         "method": "drop"
@@ -69,16 +69,16 @@
     "rule_set": [
       {
         "type": "remote",
-        "tag": "adguard-mobile",
+        "tag": "adguardns",
         "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/yesokay666/filter@main/srs/AdGuardMobile.srs",
+        "url": "https://cdn.jsdelivr.net/gh/yesokay666/filter@main/srs/AdGuardDNS.srs",
         "download_detour": "direct"
       },
       {
         "type": "remote",
         "tag": "nocoin",
         "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/yesokay666/filter@main/srs/NoCoin.srs",
+        "url": "https://cdn.jsdelivr.net/gh/yesokay666/filter@main/srs/AdguardCryptominers.srs",
         "download_detour": "direct"
       },
       {
