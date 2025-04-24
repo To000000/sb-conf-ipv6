@@ -17,7 +17,6 @@
     "rules": [
       {
         "protocol": [
-          "quic",
           "Chinese",
           "Mobile",
           "AdGuardAds",
@@ -27,7 +26,8 @@
           "EasyListAds",
           "EasyPrivacy",
           "MaliciousURL",
-          "Track"
+          "Track",
+          "quic"
         ],
         "action": "reject",
         "method": "drop"
