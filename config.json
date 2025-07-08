@@ -16,12 +16,17 @@
     ],
     "rules": [
       {
-        "protocol": [
+        "rule_set": [
           "AdguardCryptominers",
           "MaliciousURL",
           "NoCoin",
           "uBlockBadwarerisks",
-          "uBlockResourceabuse",
+          "uBlockResourceabuse"
+        ],
+        "action": "predefined"
+      },
+      {
+        "protocol": [
           "quic"
         ],
         "action": "reject",
