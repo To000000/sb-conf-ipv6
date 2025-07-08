@@ -23,7 +23,8 @@
           "uBlockBadwarerisks",
           "uBlockResourceabuse"
         ],
-        "action": "predefined"
+        "action": "reject",
+        "method": "drop"
       },
       {
         "protocol": [
