@@ -1,17 +1,22 @@
 {
   "log": {
+    "disabled": true,
+    "level": "info",
+    "output": "log.txt",
+    "timestamp": true
   },
   "dns": {
     "servers": [
       {
+        "type": "tls",
         "tag": "dns_direct",
-        "address": "local"
+        "server": "223.5.5.5"
       },
       {
+        "type": "tls",
         "tag": "dns_proxy",
-        "address": "tls://8.8.8.8",
-        "detour": "🎛️",
-        "client_subnet": "62.204.54.1"
+        "server": "8.8.8.8",
+        "detour": "🎛️"
       }
     ],
     "rules": [
@@ -23,8 +28,7 @@
           "uBlockBadwarerisks",
           "uBlockResourceabuse"
         ],
-        "action": "reject",
-        "method": "drop"
+        "action": "predefined"
       },
       {
         "protocol": [
@@ -34,8 +38,31 @@
         "method": "drop"
       },
       {
+        "type": "logical",
+        "mode": "or",
+        "rules": [
+          {
+            "clash_mode": "Direct"
+          },
+          {
+            "protocol": [
+              "bittorrent"
+            ]
+          }
+        ],
+        "action": "route",
+        "server": "dns_direct",
+        "rewrite_ttl": 64
+      },
+      {
+        "clash_mode": "Global",
+        "action": "route",
+        "server": "dns_proxy",
+        "client_subnet": "62.204.54.1",
+        "rewrite_ttl": 64
+      },
+      {
         "protocol": [
-          "bittorrent",
           "ssh"
         ],
         "action": "route",
@@ -48,6 +75,7 @@
         ],
         "action": "route",
         "server": "dns_proxy",
+        "client_subnet": "62.204.54.1",
         "rewrite_ttl": 64
       },
       {
@@ -67,6 +95,12 @@
         "action": "route",
         "server": "dns_proxy",
         "client_subnet": "119.29.29.29",
+        "rewrite_ttl": 64
+      },
+      {
+        "clash_mode": "Rule",
+        "action": "route-options",
+        "client_subnet": "62.204.54.1",
         "rewrite_ttl": 64
       }
     ],
@@ -168,8 +202,28 @@
         "method": "drop"
       },
       {
+        "type": "logical",
+        "mode": "or",
+        "rules": [
+          {
+            "clash_mode": "Direct"
+          },
+          {
+            "protocol": [
+              "bittorrent"
+            ]
+          }
+        ],
+        "action": "route",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "Global",
+        "action": "route",
+        "outbound": "🎛️"
+      },
+      {
         "protocol": [
-          "bittorrent",
           "ssh"
         ],
         "action": "route",
@@ -191,6 +245,12 @@
         ],
         "action": "route",
         "outbound": "direct"
+      },
+      {
+        "clash_mode": "Rule",
+        "action": "resolve",
+        "strategy": "prefer_ipv6",
+        "server": "dns_proxy"
       }
     ],
     "final": "🎛️",
@@ -202,15 +262,21 @@
       "store_rdrc": true
     }
   },
+  "certificate": {
+    "store": "mozilla"
+  },
   "inbounds": [
     {
       "type": "tun",
-      "tag": "tun-in",
+      "tag": "tun",
       "address": [
         "fdfe:dcba:9876::1/126",
         "172.18.0.1/30"
       ],
       "auto_route": true,
+      "loopback_address": [
+        "10.7.0.1"
+      ],
       "strict_route": true,
       "endpoint_independent_nat": true,
       "stack": "mixed"
