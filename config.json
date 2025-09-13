@@ -273,7 +273,6 @@
         "172.18.0.1/30"
       ],
       "auto_route": true,
-      "auto_redirect": true,
       "loopback_address": [
         "10.7.0.1"
       ],
@@ -332,4 +331,5 @@
     }
   ]
 }
+
 
