@@ -302,29 +302,21 @@
       ]
     },
     {
-      "type": "shadowsocks",
+      "type": "anytls",
       "tag": "🛰IPV6️⃣",
-      "detour": "shadowtls",
-      "method": "2022-blake3-chacha20-poly1305",
-      "password": "IvlHBZdXWPhoCxa38W3AbBwdgSuaWiRkqdlDG0ticzo=",
-      "udp_over_tcp": {
-        "enabled": true,
-        "version": 2
-      }
-    },
-    {
-      "type": "shadowtls",
-      "tag": "shadowtls",
       "server": "2604:9cc0:0000:bc94::1",
       "server_port": 443,
-      "version": 3,
-      "password": "NU0jWMYui/UtzUwYKOYxM/ybXkNvJFqHzNkdJZe7LJg=",
+      "password": "0V7Gl/wEWS9FV0Br1NMmIWmBV9yRn93/o5DRl2bvnQo=",
       "tls": {
         "enabled": true,
-        "server_name": "apple.com",
         "utls": {
           "enabled": true,
           "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "5YBFyjtP8FLgRdLb-5E8PJnR9vLJ-9ym-3-j6FOtW0o",
+          "short_id": "f7596e5806ac48d2"
         }
       }
     },
@@ -334,6 +326,7 @@
     }
   ]
 }
+
 
 
 
