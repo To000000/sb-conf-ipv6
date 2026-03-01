@@ -9,7 +9,8 @@
     "servers": [
       {
         "type": "local",
-        "tag": "dns_direct"
+        "tag": "dns_direct",
+        "prefer_go": true
       },
       {
         "type": "tls",
@@ -149,8 +150,19 @@
         "outbound": "direct"
       },
       {
-        "protocol": [
-          "quic"
+        "type": "logical",
+        "mode": "or",
+        "rules": [
+          {
+            "network": [
+              "icmp"
+            ]
+          },
+          {
+            "protocol": [
+              "quic"
+            ]
+          }
         ],
         "action": "reject",
         "method": "drop"
@@ -281,8 +293,3 @@
     }
   ]
 }
-
-
-
-
-
