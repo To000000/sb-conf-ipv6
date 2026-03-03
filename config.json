@@ -225,14 +225,14 @@
       "server": "dns_direct"
     }
   },
+  "certificate": {
+    "store": "mozilla"
+  },
   "experimental": {
     "cache_file": {
       "enabled": true,
       "store_rdrc": true
     }
-  },
-  "certificate": {
-    "store": "mozilla"
   },
   "inbounds": [
     {
@@ -293,3 +293,4 @@
     }
   ]
 }
+
