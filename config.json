@@ -270,6 +270,8 @@
       "tag": "🛰IPV6️⃣",
       "server": "2604:9cc0:0000:bc94::1",
       "server_port": 443,
+      "tcp_multi_path": true,
+      "udp_fragment": true,
       "password": "0V7Gl/wEWS9FV0Br1NMmIWmBV9yRn93/o5DRl2bvnQo=",
       "tls": {
         "enabled": true,
