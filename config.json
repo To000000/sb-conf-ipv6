@@ -94,7 +94,7 @@
         "rewrite_ttl": 64
       }
     ],
-    "final": "dns_proxy",
+    "final": "dns_direct",
     "strategy": "prefer_ipv6",
     "independent_cache": true
   },
@@ -118,7 +118,7 @@
         "type": "remote",
         "tag": "site-!cn",
         "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo-lite/geosite/proxy.srs",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/geolocation-!cn.srs",
         "download_detour": "direct"
       },
       {
@@ -219,7 +219,7 @@
         "server": "dns_proxy"
       }
     ],
-    "final": "🎛️",
+    "final": "direct",
     "auto_detect_interface": true,
     "default_domain_resolver": {
       "server": "dns_direct"
