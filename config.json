@@ -275,9 +275,12 @@
       "password": "0V7Gl/wEWS9FV0Br1NMmIWmBV9yRn93/o5DRl2bvnQo=",
       "tls": {
         "enabled": true,
+        "curve_preferences": [
+          "X25519MLKEM768"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
