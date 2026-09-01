@@ -21,6 +21,11 @@
     ],
     "rules": [
       {
+        "action": "evaluate",
+        "server": "dns_proxy",
+        "remove_client_subnet": true
+      },
+      {
         "protocol": [
           "quic"
         ],
@@ -70,6 +75,7 @@
         "rewrite_ttl": 64
       },
       {
+        "match_response": true,
         "rule_set": [
           "ip-cn"
         ],
@@ -94,9 +100,7 @@
         "rewrite_ttl": 64
       }
     ],
-    "final": "dns_direct",
-    "strategy": "prefer_ipv6",
-    "independent_cache": true
+    "final": "dns_direct"
   },
   "route": {
     "rule_set": [
@@ -105,35 +109,35 @@
         "tag": "site-cn",
         "format": "binary",
         "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo-lite/geosite/cn.srs",
-        "download_detour": "direct"
+        "http_client": "http-🎛️"
       },
       {
         "type": "remote",
         "tag": "ip-cn",
         "format": "binary",
         "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/cn.srs",
-        "download_detour": "direct"
+        "http_client": "http-🎛️"
       },
       {
         "type": "remote",
         "tag": "site-!cn",
         "format": "binary",
         "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/geolocation-!cn.srs",
-        "download_detour": "direct"
+        "http_client": "http-🎛️"
       },
       {
         "type": "remote",
         "tag": "ai-cn",
         "format": "binary",
         "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ai-cn.srs",
-        "download_detour": "direct"
+        "http_client": "http-🎛️"
       },
       {
         "type": "remote",
         "tag": "steam-cn",
         "format": "binary",
         "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/steam@cn.srs",
-        "download_detour": "direct"
+        "http_client": "http-🎛️"
       }
     ],
     "rules": [
@@ -225,10 +229,32 @@
       "server": "dns_direct"
     }
   },
+  "http_clients": [
+    {
+      "engine": "go",
+      "tag": "http-direct",
+      "detour": "direct",
+      "tls": {
+        "enabled": true,
+        "min_version": "1.3"
+      },
+      "disable_version_fallback": true
+    },
+    {
+      "engine": "go",
+      "tag": "http-🎛️",
+      "detour": "🎛️",
+      "tls": {
+        "enabled": true,
+        "min_version": "1.3"
+      },
+      "disable_version_fallback": true
+    }
+  ],
   "experimental": {
     "cache_file": {
       "enabled": true,
-      "store_rdrc": true
+      "store_dns": true
     }
   },
   "inbounds": [
@@ -275,6 +301,7 @@
       "password": "0V7Gl/wEWS9FV0Br1NMmIWmBV9yRn93/o5DRl2bvnQo=",
       "tls": {
         "enabled": true,
+        "min_version": "1.3",
         "curve_preferences": [
           "X25519MLKEM768"
         ],
