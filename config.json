@@ -109,35 +109,35 @@
         "tag": "site-cn",
         "format": "binary",
         "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo-lite/geosite/cn.srs",
-        "http_client": "http-🎛️"
+        "http_client": "http-direct"
       },
       {
         "type": "remote",
         "tag": "ip-cn",
         "format": "binary",
         "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/cn.srs",
-        "http_client": "http-🎛️"
+        "http_client": "http-direct"
       },
       {
         "type": "remote",
         "tag": "site-!cn",
         "format": "binary",
         "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/geolocation-!cn.srs",
-        "http_client": "http-🎛️"
+        "http_client": "http-direct"
       },
       {
         "type": "remote",
         "tag": "ai-cn",
         "format": "binary",
         "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ai-cn.srs",
-        "http_client": "http-🎛️"
+        "http_client": "http-direct"
       },
       {
         "type": "remote",
         "tag": "steam-cn",
         "format": "binary",
         "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/steam@cn.srs",
-        "http_client": "http-🎛️"
+        "http_client": "http-direct"
       }
     ],
     "rules": [
@@ -233,17 +233,6 @@
     {
       "engine": "go",
       "tag": "http-direct",
-      "detour": "direct",
-      "tls": {
-        "enabled": true,
-        "min_version": "1.3"
-      },
-      "disable_version_fallback": true
-    },
-    {
-      "engine": "go",
-      "tag": "http-🎛️",
-      "detour": "🎛️",
       "tls": {
         "enabled": true,
         "min_version": "1.3"
